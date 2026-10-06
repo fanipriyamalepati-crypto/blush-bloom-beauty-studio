@@ -1,0 +1,137 @@
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blush & Bloom Beauty Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">Blush & Bloom</h2>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Discover Your Natural Beauty</h1>
+        <p>Feel beautiful, confident and special every day.</p>
+        <a href="#services" class="btn">Explore Services</a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900"
+          alt="Beautiful beauty salon" />
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service">
+          <h3>Facial</h3>
+          <p>Relax and refresh your skin.</p>
+        </div>
+        <div class="service">
+          <h3>Bridal Makeup</h3>
+          <p>Look gorgeous on your special day.</p>
+        </div>
+        <div class="service">
+          <h3>Hair Styling</h3>
+          <p>Beautiful hairstyles for every occasion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Our Gallery</h2>
+      <p>Explore our beauty studio.</p>
+      <div class="gallery">
+        <img
+          src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500"
+          alt="Makeup" />
+        <img
+          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500"
+          alt="Hair styling" />
+        <img
+          src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500"
+          alt="Beauty products" />
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Book an Appointment</h2>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <select id="service" required>
+          <option value="">Choose a Service</option>
+          <option>Facial</option>
+          <option>Bridal Makeup</option>
+          <option>Hair Styling</option>
+        </select>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section id="reviews">
+      <h2>What Our Customers Say</h2>
+
+      <div class="review-container">
+        <div class="review-card">
+          <h3>Priya</h3>
+          <p class="stars">★★★★★</p>
+          <p>
+            "Amazing service! I loved my facial. The staff were very friendly."
+          </p>
+        </div>
+
+        <div class="review-card">
+          <h3>Sneha</h3>
+          <p class="stars">★★★★★</p>
+          <p>
+            "Beautiful makeup and wonderful experience. Highly recommended!"
+          </p>
+        </div>
+
+        <div class="review-card">
+          <h3>Divya</h3>
+          <p class="stars">★★★★★</p>
+          <p>"I really liked the hair styling. The service was excellent."</p>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Welcome to Blush & Bloom Beauty Studio. We make every beauty experience
+        special with care and elegance.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2026 Blush & Bloom Beauty Studio</p>
+    </footer>
+    <!--WhatsApp Booking Button-->
+    <a
+      href="#"
+      class="whatsapp-btn"
+      id="whatsappBooking"
+      target="_blank"
+      rel="noopener noreferrer">
+      <span class="whatsapp-icon">☏</span>
+      Book on WhatsApp
+    </a>
+    <script src="script.js"></script>
+  </body>
+</html>
