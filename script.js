@@ -23,7 +23,7 @@ bookingForm.addEventListener("submit", function (event) {
 const whatsappButton = document.getElementById("whatsappBooking");
 
 // Replace this with your WhatsApp number
-const whatsappNumber = "917207287236";
+const whatsappNumber = "919550688737";
 
 whatsappButton.addEventListener("click", function (event) {
   event.preventDefault();
