@@ -1,53 +1,33 @@
 /** @format */
 
-const bookingForm = document.getElementById("bookingForm");
-const message = document.getElementById("message");
+document.addEventListener("DOMContentLoaded", function () {
+  const bookingForm = document.getElementById("bookingForm");
+  const message = document.getElementById("message");
+  const whatsappButton = document.getElementById("whatsappBooking");
 
-bookingForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+  whatsappButton.addEventListener("click", function () {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
 
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const service = document.getElementById("service").value;
+    if (!name || !phone || !service) {
+      alert("Please fill in your name, phone number and service first.");
+      return;
+    }
 
-  if (!/^[0-9+\-\s()]{7,15}$/.test(phone)) {
-    message.textContent = "Please enter a valid phone number.";
-    return;
-  }
+    const whatsappNumber = "919550688737";
 
-  message.textContent = `Thank you, ${name}! Your ${service} appointment request has been received.`;
+    const whatsappMessage =
+      `Hello Blush & Bloom Beauty Studio!\n` +
+      `I would like to book an appointment.\n\n` +
+      `Name: ${name}\n` +
+      `Phone: ${phone}\n` +
+      `Service: ${service}`;
 
-  bookingForm.reset();
-});
+    const url =
+      `https://wa.me/${whatsappNumber}?text=` +
+      encodeURIComponent(whatsappMessage);
 
-const whatsappButton = document.getElementById("whatsappBooking");
-
-// Replace this with your WhatsApp number
-const whatsappNumber = "919550688737";
-
-whatsappButton.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const service = document.getElementById("service").value;
-
-  if (!name || !phone || !service) {
-    alert("Please fill in your name, phone number and service first.");
-    document.getElementById("contact").scrollIntoView({
-      behavior: "smooth",
-    });
-    return;
-  }
-
-  const message =
-    `Hello Blush & Bloom Beauty Studio!\n` +
-    `I would like to book an appointment.\n` +
-    `Name: ${name}\n` +
-    `Phone: ${phone}\n` +
-    `Service: ${service}`;
-
-  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-  window.open(url, "_blank");
+    window.location.href = url;
+  });
 });

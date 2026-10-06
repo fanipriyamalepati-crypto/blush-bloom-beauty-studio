@@ -391,3 +391,29 @@ html {
   color: #f5a623;
   font-size: 22px;
 }
+#whatsappBooking {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  #whatsappBooking {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #whatsappBooking:hover {
+    background-color: #c2185b;
+  }
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#whatsappBooking:hover {
+  background-color: #c2185b;
+}
